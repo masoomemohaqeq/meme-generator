@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+:root{
+  --purple:#711F8D;
+  --linearPurple:linear-gradient(to right,#711F8D,#A626D3);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav{
+  background-image: var(--linearPurple);
+  padding: 20px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.nav-logo{
+  font-size: 1.3rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.nav-title{
+  font-family: inter;
+  font-size: 1rem;
+}
+
+.logo{
+  width: 40px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+
+.app-title{
+  display: none;
+  margin: auto;
+}
+
+.container{
+  margin: 30px;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.text-input{
+  width: 100%;
+  height: 35px;
+  border: 1px solid #D5D4D8;
+  border-radius: 5px;
+  outline: none;
+  padding: 10px;
+  margin-top: 5px;
+  font-family: "Karla",sans-serif;
+}
+
+.submit-btn{
+  background-image: var(--linearPurple);
+  color: white;
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 1rem;
+  font-family: "Karla",sans-serif;
+}
+
+.meme-img{
+  width: 100%;
+}
+
+.meme-img-container{
+  margin-top: 35px;
+  min-width: 200px;
+  position: relative;
+}
+
+.meme-text{
+  color: white;
+  stroke: 1px solid black;
+  font-weight: bolder;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  letter-spacing: 1px ;
+  font-size: 2em;
+  text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
+}
+
+.top{
+  top: 10px;
+}
+
+.bottom{
+  bottom: 10px;
+}
+
+@media only screen and (min-width:768px){
+  .container{
+    width: 490px;
+    margin: 40px auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .row{
+    justify-content: space-between;
+    flex-direction: row;
   }
+
+  .text-input{
+    width: 230px;
+    height: 35px;
+  }
+
+.app-title{
+  display: inline-block;
+}
+
 }
