@@ -58,8 +58,6 @@ function Meme() {
     });
   }
 
-  console.log("test git");
-
   return (
     <main className="container">
       <div className="meme-form">
